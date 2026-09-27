@@ -19,7 +19,6 @@ public class Doctor extends Person {
 
     public String getSpecialization() { return specialization; }
 
-
     public String toCSV() {
         return getId() + "," + getName() + "," + specialization;
     }

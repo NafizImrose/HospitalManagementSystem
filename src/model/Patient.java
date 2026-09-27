@@ -20,13 +20,13 @@ public class Patient extends Person {
     public String getDisease() { return disease; }
 
 
-    // Convert object to line for CSV saving
+
     public String toCSV() {
         return getId() + "," + getName() + "," + disease;
     }
 
 
-    // Convert CSV line back to object
+
     public static Patient fromCSV(String line) {
         String[] parts = line.split(",");
         if (parts.length < 3) return null;

@@ -1,3 +1,6 @@
+package model;
+
+
 public abstract class Person {
     private String id;
     private String name;
@@ -15,3 +18,4 @@ public abstract class Person {
     public String getId() { return id; }
     public String getName() { return name; }
 }
+

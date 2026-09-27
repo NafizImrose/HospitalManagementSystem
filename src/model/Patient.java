@@ -8,6 +8,7 @@ public class Patient extends Person {
         this.disease = disease;
     }
 
+
     @Override
     public String getRole() {
         return "Patient";

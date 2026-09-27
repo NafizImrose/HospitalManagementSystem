@@ -15,7 +15,7 @@ import java.util.ArrayList;
 
 
 public class PatientApp extends JFrame {
-    // --- PATIENT TAB COMPONENTS ---
+
     private JTextField txtPatientId = new JTextField(8);
     private JTextField txtPatientName = new JTextField(12);
     private JTextField txtDisease = new JTextField(12);
@@ -45,11 +45,11 @@ public class PatientApp extends JFrame {
         setLocationRelativeTo(null); // Center on screen
 
 
-        // Load patient records from file on startup
+
         patientList = FileStorage.loadPatients();
 
 
-        // JTabbedPane creates separate tabs for Patients and Doctors
+
         JTabbedPane tabbedPane = new JTabbedPane();
         tabbedPane.addTab("Patients Management", createPatientPanel());
         tabbedPane.addTab("Doctors Management", createDoctorPanel());
@@ -63,9 +63,9 @@ public class PatientApp extends JFrame {
     }
 
 
-    // ==========================================
-    // 1. PATIENTS MANAGEMENT PANEL
-    // ==========================================
+
+    //  PATIENTS MANAGEMENT PANEL
+
     private JPanel createPatientPanel() {
         JPanel mainPanel = new JPanel(new BorderLayout(10, 10));
 
@@ -120,7 +120,6 @@ public class PatientApp extends JFrame {
         mainPanel.add(centerContainer, BorderLayout.CENTER);
 
 
-        // --- Patient Event Listeners ---
         btnAdd.addActionListener(e -> {
             try {
                 String id = txtPatientId.getText().trim();
@@ -205,9 +204,7 @@ public class PatientApp extends JFrame {
     }
 
 
-    // ==========================================
-    // 2. DOCTORS MANAGEMENT PANEL
-    // ==========================================
+
     private JPanel createDoctorPanel() {
         JPanel mainPanel = new JPanel(new BorderLayout(10, 10));
 
@@ -245,7 +242,7 @@ public class PatientApp extends JFrame {
         mainPanel.add(centerContainer, BorderLayout.CENTER);
 
 
-        // --- Doctor Event Listeners ---
+
         btnAddDoc.addActionListener(e -> {
             try {
                 String id = txtDoctorId.getText().trim();
@@ -275,7 +272,7 @@ public class PatientApp extends JFrame {
     }
 
 
-    // --- HELPER METHODS ---
+
     private void refreshPatientTable(List<Patient> list) {
         patientTableModel.setRowCount(0);
         for (Patient p : list) {

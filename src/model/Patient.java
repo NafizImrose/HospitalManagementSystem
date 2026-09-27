@@ -26,7 +26,6 @@ public class Patient extends Person {
     }
 
 
-
     public static Patient fromCSV(String line) {
         String[] parts = line.split(",");
         if (parts.length < 3) return null;

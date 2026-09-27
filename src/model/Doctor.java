@@ -10,7 +10,6 @@ public class Doctor extends Person {
         this.specialization = specialization;
     }
 
-
     @Override
     public String getRole() {
         return "Doctor (" + specialization + ")";
